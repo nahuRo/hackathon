@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
     "@rainbow-me/rainbowkit": "^0.12.5",
     "@web3auth/modal": "^5.1.1",
     "ethers": "^5.7.2",
@@ -16,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
+    "recharts": "^2.5.0",
     "wagmi": "^0.12.8"
   },
   "devDependencies": {

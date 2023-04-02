@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "./App.css";
 import "@rainbow-me/rainbowkit/styles.css";
 import MainPage from "./components/MainPage";
 import UserPage from "./components/UserPage";
 import LoginPage from "./components/LoginPage";
+import DashPage from "./components/DashPage";
+import ProyectsPage from "./components/ProyectsPage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ProviderWagmi } from "./components/WagmiContext";
@@ -17,6 +18,8 @@ function App() {
 						<Route path="/" element={<MainPage />} />
 						<Route path="/login" element={<LoginPage />} />
 						<Route path="/profile" element={<UserPage />} />
+						<Route path="/profile/dashboard" element={<DashPage />} />
+						<Route path="/profile/proyects" element={<ProyectsPage />} />
 					</Routes>
 				</BrowserRouter>
 			</ProviderWagmi>
