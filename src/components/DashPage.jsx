@@ -69,7 +69,7 @@ const DashPage = () => {
 				<h2 className="text-lg text-black pb-8 text-center">Generar nuevo Proyecto</h2>
 				<form
 					onSubmit={handleSearch}
-					className="flex flex-col justify-evenly items-center gap-4 bg-[#77ACD2] p-3 w-full rounded-sm my-0 mx-auto"
+					className="flex flex-col justify-evenly  gap-4 bg-[#77ACD2] p-3 w-full rounded-sm my-0 mx-auto"
 				>
 					<div className="w-full ">
 						<label>
@@ -116,15 +116,15 @@ const DashPage = () => {
 							</label>
 						</div>
 					</div>
-					<div className="flex flex-row gap-x-4">
+					<div className="flex flex-row gap-x-4 justify-start">
 						<span className="font-[500]">Privacidad del Proyecto:</span>
 						<div>
 							<input type="radio" id="huey" name="drone" value="huey" checked />
-							<label for="huey">Huey</label>
+							<label htmlFor="huey">Huey</label>
 						</div>
 						<div>
 							<input type="radio" id="dewey" name="drone" value="dewey" />
-							<label for="dewey">Dewey</label>
+							<label htmlFor="dewey">Dewey</label>
 						</div>
 					</div>
 					<div className="w-full">
