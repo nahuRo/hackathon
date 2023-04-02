@@ -34,17 +34,19 @@ const MainPage = () => {
 				<img src={img_landing} alt="" className="w-3/6 sm:w-4/12 pt-12 sm:pt-0" />
 			</section>
 			<section className="bg-[#9670c0] mt-20 py-8 sm:py-14  flex justify-center relative">
-				<div className="w-[600px] max-w-screen-lg">
-					<h2 className="text-white text-2xl">Nuestra Mision</h2>
-					<br />
+				<div className="w-[600px] max-w-screen-lg h-56 mr-[26rem]">
+					<h2 className="text-white text-2xl pb-2">Nuestra Mision</h2>
 					<p>
 						La misión de BONDLY es ayudar a las organizaciones con el manejo de sus
 						fondos y al mismo tiempo poder brindar transparencia a sus inversores,
-						integrantes, comunidades o usuarios. BONDLY es la mano que las
-						organizaciones necesitan para no perder dinero por falta de control.
+						integrantes, comunidades o usuarios.
+					</p>
+					<p>
+						BONDLY es la mano que las organizaciones necesitan para no perder
+						dinero por falta de control.
 					</p>
 				</div>
-				<img src={asteroides} alt="asteroides" className="absolute right-0" />
+				<img src={asteroides} alt="asteroides" className="absolute right-0 top-0 " />
 			</section>
 			<section className="py-14 px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-row">
 				<div className="w-1/2">
