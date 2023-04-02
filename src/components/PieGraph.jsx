@@ -1,7 +1,16 @@
 import React from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
-const COLORS = ["#0088FE", "#a000c4", "#173120", "#572309", "#173ds0", "#ff2f2f"];
+const COLORS = [
+	"#173ds0",
+	"#ff2f2f",
+	"#89375F",
+	"#9A208C",
+	"#57C5B6",
+	"#0088FE",
+	"#a000c4",
+	"#572309",
+];
 
 const PieGraph = ({ data }) => {
 	const RADIAN = Math.PI / 180;
@@ -22,7 +31,7 @@ const PieGraph = ({ data }) => {
 			<text
 				x={x}
 				y={y}
-				fill="black"
+				fill="white"
 				textAnchor={x > cx ? "start" : "end"}
 				dominantBaseline="central"
 			>
