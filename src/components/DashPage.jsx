@@ -116,6 +116,17 @@ const DashPage = () => {
 							</label>
 						</div>
 					</div>
+					<div className="flex flex-row gap-x-4">
+						<span className="font-[500]">Privacidad del Proyecto:</span>
+						<div>
+							<input type="radio" id="huey" name="drone" value="huey" checked />
+							<label for="huey">Huey</label>
+						</div>
+						<div>
+							<input type="radio" id="dewey" name="drone" value="dewey" />
+							<label for="dewey">Dewey</label>
+						</div>
+					</div>
 					<div className="w-full">
 						<label>
 							<span className="font-[500]">Descripcion:</span>

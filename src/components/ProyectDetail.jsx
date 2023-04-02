@@ -108,7 +108,6 @@ const ProyectDetail = () => {
 										<thead>
 											<tr className="bg-indigo-500">
 												<th>Titulo</th>
-
 												<th>Blockchain</th>
 												<th>Token</th>
 												<th>Cantidad</th>
@@ -121,8 +120,7 @@ const ProyectDetail = () => {
 												item.movements.map((mov) => (
 													<tr key={mov.id}>
 														<th>{mov.title}</th>
-														<th>{mov.description}</th>
-
+														<th>{mov.blockchain}</th>
 														<th>{mov.token}</th>
 														<th>{mov.quantity}</th>
 														<th>{mov.to_address}</th>
@@ -293,29 +291,36 @@ const ProyectDetail = () => {
 
 													<div className="bg-slate-300 h-12 w-full pl-5 flex items-center">
 														<h3 className="text-lg font-semibold text-black">
-															Fotografia
+															Alquiler de Venue
 														</h3>
 													</div>
-													<div className="absolute top-4 right-3 text-red-600 transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
+													<div className="absolute top-4 right-3 text-black transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
 														<MdKeyboardArrowLeft />
 													</div>
 													<div className="bg-white overflow-hidden transition-all  h-0 peer-checked:h-full">
 														<div className="p-4">
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Nombre: Fotografia</h3>
+																<h3>
+																	Descripcion del movimineto:
+																	Se realizo el alquiler de
+																	Venue
+																</h3>
 															</span>
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Cantidad: 2000 USDT</h3>
+																<h3>Total: 2000 USDT</h3>
 															</span>
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Address: 0x23217821</h3>
+																<h3>
+																	Address:
+																	0x0e5C9eCDC1bbf9DB32A6860b63e82AeAE694
+																</h3>
 															</span>
-															<div className="flex flex-row gap-2">
-																<button className="p-2 bg-indigo-600 hover:bg-indigo-400 w-full rounded">
+															<div className="flex flex-row gap-2 text-white">
+																<button className="p-2 bg-green-700 w-full rounded">
 																	Aprobar
 																</button>
-																<button className="p-2 bg-indigo-600 hover:bg-indigo-400 w-full rounded">
-																	Desestimar
+																<button className="p-2 bg-red-700 w-full rounded">
+																	Rechazar
 																</button>
 															</div>
 														</div>
@@ -329,29 +334,36 @@ const ProyectDetail = () => {
 
 													<div className="bg-slate-300 h-12 w-full pl-5 flex items-center">
 														<h3 className="text-lg font-semibold text-black">
-															Fotografia
+															Compra de Pizzas
 														</h3>
 													</div>
-													<div className="absolute top-4 right-3 text-red-600 transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
+													<div className="absolute top-4 right-3 text-black transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
 														<MdKeyboardArrowLeft />
 													</div>
 													<div className="bg-white overflow-hidden transition-all  h-0 peer-checked:h-full">
 														<div className="p-4">
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Nombre: Fotografia</h3>
+																<h3>
+																	Descripcion del movimineto:
+																	Almuerzo del team
+																	thinkathonics
+																</h3>
 															</span>
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Cantidad: 2000 USDT</h3>
+																<h3>Total: 10 USDT</h3>
 															</span>
 															<span className="p-1 m-1 bg-slate-300 block">
-																<h3>Address: 0x23217821</h3>
+																<h3>
+																	Address:
+																	0x0e5C9eCDC1bbf9DB32A6860b63e82AeAE694
+																</h3>
 															</span>
-															<div className="flex flex-row gap-2">
-																<button className="p-2 bg-indigo-600 hover:bg-indigo-400 w-full rounded">
+															<div className="flex flex-row gap-2 text-white">
+																<button className="p-2 bg-green-700 w-full rounded">
 																	Aprobar
 																</button>
-																<button className="p-2 bg-indigo-600 hover:bg-indigo-400 w-full rounded">
-																	Desestimar
+																<button className="p-2 bg-red-700 w-full rounded">
+																	Rechazar
 																</button>
 															</div>
 														</div>

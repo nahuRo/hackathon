@@ -18,12 +18,11 @@ const MainPage = () => {
 			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between sm:py-20">
 				<div className="mt-20 w-full sm:w-7/12">
-					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xlfont-bold text-[#9670c0]">
-						INSPIRA, CONECTA Y EXPANDE TU HISTORIA.
+					<h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-[#9670c0]">
+						PROYECTOS QUE ROCKEAN
 					</h1>
 					<p className="text-sm md:text-base lg:text-xl py-4 text-gray-700">
-						El primer sistema de gestión administrativo y transaccional preparado
-						para el mundo descentralizado
+						Tu sistema de gestión para el mundo descentralizado
 					</p>
 					<div className="space-x-4 mt-4 sm:mt-8">
 						<a href="#" className="bg-[#9670c0] py-2 px-6 rounded">
@@ -44,8 +43,8 @@ const MainPage = () => {
 							<h3 className="text-base md:text-lg">Empieza ahora tu camino</h3>
 						</div>
 						<p className="text-sm lg:text-base">
-							Te orientamos en tus primeros pasos por la comunidad Omaly para que
-							empieces a crear tu podcast y usar nuestras herramientas.
+							Te orientamos en tus primeros pasos por la comunidad Bondly para
+							que empieces a crear tu podcast y usar nuestras herramientas.
 						</p>
 					</div>
 					<div className="">
@@ -54,7 +53,7 @@ const MainPage = () => {
 							<h3 className="text-base md:text-lg">Crea tu comunidad</h3>
 						</div>
 						<p className="text-sm lg:text-base">
-							En Omaly puedes encontrar una comunidad que comparte contenido
+							En Bondly puedes encontrar una comunidad que comparte contenido
 							cultural y de valor.
 						</p>
 					</div>
