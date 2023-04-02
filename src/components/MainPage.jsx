@@ -4,10 +4,8 @@ import Footer from "./Footer";
 
 import img_landing from "../assets/img_landig.png";
 import img_preguntas from "../assets/img_preguntas.png";
+import asteroides from "../assets/asteroide.svg";
 
-import { SiBitcoincash } from "react-icons/si";
-import { IoMdMicrophone } from "react-icons/io";
-import { IoPeopleSharp } from "react-icons/io5";
 import { BsBarChartLineFill } from "react-icons/bs";
 
 const MainPage = () => {
@@ -35,49 +33,18 @@ const MainPage = () => {
 				</div>
 				<img src={img_landing} alt="" className="w-3/6 sm:w-4/12 pt-12 sm:pt-0" />
 			</section>
-			<section className="bg-[#9670c0] mt-20 py-8 sm:py-14 px-8">
-				<div className="max-w-screen-xl my-0 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-					<div className="">
-						<div className="flex flex-row justify-start gap-x-4 py-4">
-							<IoMdMicrophone className="text-3xl" />
-							<h3 className="text-base md:text-lg">Empieza ahora tu camino</h3>
-						</div>
-						<p className="text-sm lg:text-base">
-							Te orientamos en tus primeros pasos por la comunidad Bondly para
-							que empieces a crear tu podcast y usar nuestras herramientas.
-						</p>
-					</div>
-					<div className="">
-						<div className="flex flex-row justify-start gap-x-4 py-4">
-							<IoPeopleSharp className="text-3xl" />
-							<h3 className="text-base md:text-lg">Crea tu comunidad</h3>
-						</div>
-						<p className="text-sm lg:text-base">
-							En Bondly puedes encontrar una comunidad que comparte contenido
-							cultural y de valor.
-						</p>
-					</div>
-					<div className="">
-						<div className="flex flex-row justify-start gap-x-4 py-4">
-							<BsBarChartLineFill className="text-3xl" />
-							<h3 className="text-base md:text-lg">Haz crecer tu audiencia</h3>
-						</div>
-						<p className="text-sm lg:text-base">
-							Herramientas para entender que necesitan tus seguidores y acelerar
-							así tu crecimiento
-						</p>
-					</div>
-					<div className="">
-						<div className="flex flex-row justify-start gap-x-4 py-4">
-							<SiBitcoincash className="text-3xl" />
-							<h3 className="text-base md:text-lg">Genera ganancias ya</h3>
-						</div>
-						<p className="text-sm lg:text-base">
-							Monetiza tus podcasts desde el día uno. Pon en valor tus proyectos
-							a partir del reconocimiento que te dé tu audiencia.
-						</p>
-					</div>
+			<section className="bg-[#9670c0] mt-20 py-8 sm:py-14  flex justify-center relative">
+				<div className="w-[600px] max-w-screen-lg">
+					<h2 className="text-white text-2xl">Nuestra Mision</h2>
+					<br />
+					<p>
+						La misión de BONDLY es ayudar a las organizaciones con el manejo de sus
+						fondos y al mismo tiempo poder brindar transparencia a sus inversores,
+						integrantes, comunidades o usuarios. BONDLY es la mano que las
+						organizaciones necesitan para no perder dinero por falta de control.
+					</p>
 				</div>
+				<img src={asteroides} alt="asteroides" className="absolute right-0" />
 			</section>
 			<section className="py-14 px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-row">
 				<div className="w-1/2">

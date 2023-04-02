@@ -120,11 +120,11 @@ const DashPage = () => {
 						<span className="font-[500]">Privacidad del Proyecto:</span>
 						<div>
 							<input type="radio" id="huey" name="drone" value="huey" checked />
-							<label htmlFor="huey">Huey</label>
+							<label htmlFor="huey">Publico</label>
 						</div>
 						<div>
 							<input type="radio" id="dewey" name="drone" value="dewey" />
-							<label htmlFor="dewey">Dewey</label>
+							<label htmlFor="dewey">Privado</label>
 						</div>
 					</div>
 					<div className="w-full">
