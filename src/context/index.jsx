@@ -6,6 +6,7 @@ import Img_Think from "../assets/thinkathonics.png";
 import Img_Omaly from "../assets/Omaly.png";
 import Img_Relleno from "../assets/random.png";
 import Img_Solow from "../assets/solow.png";
+import Img_Lighting from "../assets/lighting.png";
 
 export const appContext = createContext();
 
@@ -182,7 +183,7 @@ export const ProyectProvider = ({ children }) => {
 			validity: "2023-04-15",
 			estimate: "12000",
 			finalized: true,
-			img: Img_Relleno,
+			img: Img_Lighting,
 			movements: [
 				{
 					title: "1",
