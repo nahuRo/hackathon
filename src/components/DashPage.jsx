@@ -69,7 +69,7 @@ const DashPage = () => {
 				<h2 className="text-lg text-black pb-8 text-center">Generar nuevo Proyecto</h2>
 				<form
 					onSubmit={handleSearch}
-					className="flex flex-col justify-evenly  gap-4 bg-[#77ACD2] p-3 w-full rounded-sm my-0 mx-auto"
+					className="flex flex-col justify-evenly gap-4 bg-[#77ACD2] p-3 w-full rounded-sm my-0 mx-auto"
 				>
 					<div className="w-full ">
 						<label>
