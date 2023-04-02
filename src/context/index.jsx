@@ -1,17 +1,24 @@
 import { createContext, useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
+import Img_Cedalio from "../assets/cedalio.png";
+import Img_Ripio from "../assets/ripio.png";
+import Img_Think from "../assets/thinkathonics.png";
+import Img_Omaly from "../assets/Omaly.png";
+import Img_Relleno from "../assets/random.png";
+import Img_Solow from "../assets/solow.png";
 
 export const appContext = createContext();
 
 export const ProyectProvider = ({ children }) => {
 	const mys_proyects = [
 		{
-			name: "Construcción",
-			description: "Construcción de Bodeba Catena",
+			id: uuidv4(),
+			name: "Workshop Cedalio",
+			description: "Workshop con cryptomoneda cedalio",
 			validity: "2023-04-15",
 			estimate: "12000",
-			id: uuidv4(),
-
+			finalized: true,
+			img: Img_Cedalio,
 			movements: [
 				{
 					title: "1",
@@ -20,7 +27,6 @@ export const ProyectProvider = ({ children }) => {
 					token: "USDT",
 					quantity: 100,
 					to_address: "sd",
-					from_address: "ss",
 					file: "imagen.jpg",
 					id: uuidv4(),
 				},
@@ -31,7 +37,6 @@ export const ProyectProvider = ({ children }) => {
 					token: "USDT",
 					quantity: 200,
 					to_address: "sd",
-					from_address: "ss",
 					file: "imagen.jpg",
 					id: uuidv4(),
 				},
@@ -42,19 +47,19 @@ export const ProyectProvider = ({ children }) => {
 					token: "USDT",
 					quantity: 300,
 					to_address: "sd",
-					from_address: "ss",
 					file: "imagen.jpg",
 					id: uuidv4(),
 				},
 			],
 		},
 		{
-			name: "Reparacion",
-			description: "Reparacion de Bodeba Catena",
+			id: uuidv4(),
+			name: "Ripio Card",
+			description: "Creacion de cards con el logo de Ripio",
 			validity: "2023-04-15",
 			estimate: "12000",
-			id: uuidv4(),
-
+			finalized: false,
+			img: Img_Ripio,
 			movements: [
 				{
 					title: "1",
@@ -89,12 +94,136 @@ export const ProyectProvider = ({ children }) => {
 			],
 		},
 		{
-			name: "Compra terreno",
-			description: "Compra terreno barrio privado",
+			id: uuidv4(),
+			name: "Hackathon Think and Dev",
+			description: "Creacion de un proyecto para la hackathon de think and dev",
 			validity: "2023-04-15",
 			estimate: "12000",
+			finalized: false,
+			img: Img_Think,
+			movements: [
+				{
+					title: "1",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 100,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "2",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 200,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "3",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 300,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+			],
+		},
+		{
 			id: uuidv4(),
-
+			name: "Omaly lanzamiento app",
+			description: "Finalizar el requisito de empresa Omaly",
+			validity: "2023-04-15",
+			estimate: "12000",
+			finalized: true,
+			img: Img_Omaly,
+			movements: [
+				{
+					title: "1",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 100,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "2",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 200,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "3",
+					description: "hola como estas",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 300,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+			],
+		},
+		{
+			id: uuidv4(),
+			name: "Lighting Mate Crypto La Plata",
+			description: "Integracion con Blockchain",
+			validity: "2023-04-15",
+			estimate: "12000",
+			finalized: true,
+			img: Img_Relleno,
+			movements: [
+				{
+					title: "1",
+					description: "soy una descripcion",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 100,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "2",
+					description: "soy una descripcion",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 200,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+				{
+					title: "3",
+					description: "soy una descripcion",
+					blockchan: "Polygon",
+					token: "USDT",
+					quantity: 300,
+					to_address: "sd",
+					from_address: "ss",
+					file: "imagen.jpg",
+				},
+			],
+		},
+		{
+			id: uuidv4(),
+			name: "Copinha Solow",
+			description: "Nuevo proyecto de integracion",
+			validity: "2023-04-15",
+			estimate: "12000",
+			finalized: true,
+			img: Img_Solow,
 			movements: [
 				{
 					title: "1",
@@ -130,15 +259,6 @@ export const ProyectProvider = ({ children }) => {
 		},
 	];
 	const [proyects, setProyects] = useState(mys_proyects);
-
-	// useEffect(() => {
-	// 	(async () => {
-	// 		const { data } = await axios.get(
-	// 			`http://www.omdbapi.com/?i=tt3896198&apikey=adb234ba&s=${movie}`
-	// 		);
-	// 		setmyMovie(data);
-	// 	})();
-	// }, [movie]);
 
 	return (
 		<appContext.Provider value={{ proyects, setProyects }}>{children}</appContext.Provider>

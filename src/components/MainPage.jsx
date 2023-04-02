@@ -7,7 +7,6 @@ import { SiBitcoincash } from "react-icons/si";
 import { IoMdMicrophone } from "react-icons/io";
 import { IoPeopleSharp } from "react-icons/io5";
 import { BsBarChartLineFill } from "react-icons/bs";
-// import { useAccount } from "wagmi";
 
 const MainPage = () => {
 	return (

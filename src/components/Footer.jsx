@@ -1,17 +1,25 @@
 import React from "react";
-import logo_footer from "../assets/Horizontal 1.png";
+import logo from "../assets/logo.png";
 import { AiOutlineArrowRight } from "react-icons/ai";
-
+import { AiFillInstagram } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
 const Footer = () => {
 	return (
 		<footer className="bg-indigo-700">
 			<div className="max-w-screen-lg my-0 mx-auto py-[100px] flex flex-row justify-between">
 				<div className="flex flex-col gap-y-4">
-					<img src={logo_footer} alt="logo" className="w-36" />
+					<img src={logo} alt="logo" className="w-36" />
 					<div className="flex flex-row justify-evenly">
-						<a href="#">F</a>
-						<a href="#">L</a>
-						<a href="#">I</a>
+						<a href="#">
+							<AiFillInstagram className="w-10" />
+						</a>
+						<a href="#">
+							<AiFillLinkedin />
+						</a>
+						<a href="#">
+							<AiFillFacebook />
+						</a>
 					</div>
 				</div>
 				<div className="flex flex-col gap-y-4">

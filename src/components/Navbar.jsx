@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/Horizontal 2.png";
+import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router-dom";
 import { useAccount, useDisconnect } from "wagmi";
 
@@ -9,7 +9,7 @@ const Navbar = () => {
 
 	return (
 		<nav className="flex flex-row justify-between items-center py-4 px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto">
-			<img src={logo} className="w-32" />
+			<img src={logo} className="w-28" />
 			<ul className="flex flex-row space-x-4 text-white">
 				<li>
 					<NavLink
