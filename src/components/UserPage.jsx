@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import PieGraph from "./pieGraph";
+import PieGraph from "./PieGraph";
 import { Link } from "react-router-dom";
 import { useAccount, useDisconnect, useBalance } from "wagmi";
 import { MdOutlineStackedBarChart } from "react-icons/md";
@@ -108,7 +108,7 @@ const UserPage = () => {
 				<h2 className="text-black text-xl">
 					Total de cuenta: {getTotal(dataCrytos)} Usd
 				</h2>
-				{/* <PieGraph data={dataCrytos} /> */}
+				<PieGraph data={dataCrytos} />
 			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between sm:py-10">
 				<table className="w-full bg-slate-100 py-4">

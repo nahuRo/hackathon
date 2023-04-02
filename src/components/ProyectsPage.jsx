@@ -75,7 +75,7 @@ const ProyectsPage = () => {
 					</div>
 					<br />
 					<div className="border-b-2 border-[#9670c0]">
-						<h2 className="pb-2 font-bold text-2xl text-black">Activos</h2>
+						<h2 className="pb-2 font-bold text-2xl text-black">Finalizados</h2>
 					</div>
 					<div className="flex flex-row gap-2 pt-4 flex-wrap">
 						{proyects &&

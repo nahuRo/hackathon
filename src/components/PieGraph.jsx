@@ -1,7 +1,7 @@
 import React from "react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 
-const COLORS = ["#0088FE", "#a000c4", "#173120", "#572309", "#ffffff", "#ff2f2f"];
+const COLORS = ["#0088FE", "#a000c4", "#173120", "#572309", "#173ds0", "#ff2f2f"];
 
 const PieGraph = ({ data }) => {
 	const RADIAN = Math.PI / 180;
