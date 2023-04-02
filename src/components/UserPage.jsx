@@ -4,17 +4,53 @@ import Footer from "./Footer";
 import PieGraph from "./pieGraph";
 import { Link } from "react-router-dom";
 import { useAccount, useDisconnect, useBalance } from "wagmi";
-
+import { MdOutlineStackedBarChart } from "react-icons/md";
 const UserPage = () => {
 	const { address, isConnected } = useAccount();
 
 	const dataCrytos = [
-		{ blockchain: "Polygon", value: 140.5, name: "MATIC", usdConv: 156.64 },
-		{ blockchain: "Polygon", value: 60.4, name: "USDT", usdConv: 60.4 },
-		{ blockchain: "Ethereum", value: 40, name: "DAI", usdConv: 40 },
-		{ blockchain: "Ethereum", value: 0.6, name: "ETH", usdConv: 1095.31 },
-		{ blockchain: "Avalanche", value: 24.5, name: "AVAX", usdConv: 437.57 },
-		{ blockchain: "Avalanche", value: 34, name: "USDC", usdConv: 34.068 },
+		{
+			blockchain: "Polygon",
+			value: 140.5,
+			name: "MATIC",
+			usdConv: 156.64,
+			url: "https://coinmarketcap.com/es/currencies/polygon/",
+		},
+		{
+			blockchain: "Polygon",
+			value: 60.4,
+			name: "USDT",
+			usdConv: 60.4,
+			url: "https://coinmarketcap.com/es/currencies/tether/",
+		},
+		{
+			blockchain: "Ethereum",
+			value: 40,
+			name: "DAI",
+			usdConv: 40,
+			url: "https://coinmarketcap.com/es/currencies/multi-collateral-dai/",
+		},
+		{
+			blockchain: "Ethereum",
+			value: 0.6,
+			name: "ETH",
+			usdConv: 1095.31,
+			url: "https://coinmarketcap.com/es/currencies/ethereum/",
+		},
+		{
+			blockchain: "Avalanche",
+			value: 24.5,
+			name: "AVAX",
+			usdConv: 437.57,
+			url: "https://coinmarketcap.com/es/currencies/avalanche/",
+		},
+		{
+			blockchain: "Avalanche",
+			value: 34,
+			name: "USDC",
+			usdConv: 34.068,
+			url: "https://coinmarketcap.com/es/currencies/usd-coin/",
+		},
 	];
 
 	if (!isConnected) {
@@ -28,11 +64,13 @@ const UserPage = () => {
 			</section>
 		);
 	}
+
 	const getTotal = (dato) => {
 		let total = 0;
 		for (let i of dato) total += i.usdConv;
 		return total.toFixed(2);
 	};
+
 	return (
 		<>
 			<Navbar />
@@ -83,10 +121,13 @@ const UserPage = () => {
 						{dataCrytos.map((item) => (
 							<tr key={item.name}>
 								<th>{item.blockchain}</th>
-								<th>
+								<th className="flex flex-row gap-2 items-center justify-center">
 									{item.value} {item.name}
+									<a href={item.url} target="_blank">
+										<MdOutlineStackedBarChart className="inline-block" />
+									</a>
 								</th>
-								<th>{item.usdConv}</th>
+								<th> $ {item.usdConv}</th>
 							</tr>
 						))}
 					</tbody>

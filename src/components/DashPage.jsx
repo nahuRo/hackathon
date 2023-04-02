@@ -1,16 +1,34 @@
-import React from "react";
+import { useContext, useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 import { useAccount, useBalance } from "wagmi";
 
+import { appContext } from "../context/index";
+import { v4 as uuidv4 } from "uuid";
+
+import QRCode from "react-qr-code";
+
 const DashPage = () => {
+	const { setProyects, proyects } = useContext(appContext);
 	const { address } = useAccount();
 
 	const { data } = useBalance({
 		address,
 	});
-	// console.log(data);
+
+	const handleSearch = (e) => {
+		e.preventDefault();
+
+		const newProyect = {
+			name: e.target.name.value,
+			description: e.target.description.value,
+			validity: e.target.validity.value,
+			estimate: e.target.estimate.value,
+			id: uuidv4(),
+		};
+		setProyects([newProyect, ...proyects]);
+	};
 
 	return (
 		<>
@@ -43,9 +61,13 @@ const DashPage = () => {
 					</Link>
 				</div>
 			</section>
+
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto py-10 ">
 				<h2 className="text-lg text-white">Crea un nuevo</h2>
-				<form className="flex flex-col justify-evenly items-center gap-4 bg-red-200 p-3 w-1/2 rounded-sm my-0 mx-auto">
+				<form
+					onSubmit={handleSearch}
+					className="flex flex-col justify-evenly items-center gap-4 bg-red-200 p-3 w-1/2 rounded-sm my-0 mx-auto"
+				>
 					<div className="w-full">
 						<label>
 							Nombre:
@@ -60,7 +82,11 @@ const DashPage = () => {
 					<div className="w-full">
 						<label>
 							Descripcion:
-							<textarea className="w-full rounded p-3 mt-2" rows={10} />
+							<textarea
+								name="description"
+								className="w-full rounded p-3 mt-2"
+								rows={10}
+							/>
 						</label>
 					</div>
 					<div className="w-full">
@@ -68,7 +94,7 @@ const DashPage = () => {
 							Vigencia:
 							<input
 								type="date"
-								name="date"
+								name="validity"
 								className="w-full rounded p-3 mt-2"
 							/>
 						</label>
@@ -78,8 +104,7 @@ const DashPage = () => {
 							Presupuesto:
 							<input
 								type="number"
-								name="name"
-								required
+								name="estimate"
 								className="w-full rounded p-3 mt-3"
 							/>
 						</label>
@@ -87,6 +112,10 @@ const DashPage = () => {
 
 					<button className="bg-red-700 p-2 rounded w-full">Crear</button>
 				</form>
+			</section>
+
+			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto py-10 ">
+				<QRCode value="www.google.com" />
 			</section>
 			<Footer />
 		</>
