@@ -13,9 +13,11 @@ const ProyectsPage = () => {
 
 	return (
 		<>
-			<Navbar />
+			<section className="bg-[#9670c0]">
+				<Navbar />
+			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-				<div className="flex flex-row gap-x-4 text-white text-lg">
+				<div className="flex flex-row gap-x-4 text-black text-lg">
 					<h2>User: Thinkathonics</h2>
 					<h2>Address: {address}</h2>
 				</div>
@@ -24,19 +26,19 @@ const ProyectsPage = () => {
 				<div className="flex flex-row gap-x-2 text-white">
 					<Link
 						to="/profile"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Wallet Status
 					</Link>
 					<Link
 						to="/profile/dashboard"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Create Proyect
 					</Link>
 					<Link
 						to="/profile/proyects"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Proyects
 					</Link>
@@ -44,8 +46,8 @@ const ProyectsPage = () => {
 			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row  justify-between pb-10 min-h-screen">
 				<div className="w-full">
-					<div className="border-b-2 border-white">
-						<h2 className="pb-2 font-bold text-2xl text-white">Activos</h2>
+					<div className="border-b-2 border-[#9670c0]">
+						<h2 className="pb-2 font-bold text-2xl text-black">Activos</h2>
 					</div>
 					<div className="flex flex-row gap-2 pt-4 flex-wrap">
 						{proyects &&
@@ -72,8 +74,8 @@ const ProyectsPage = () => {
 							})}
 					</div>
 					<br />
-					<div className="border-b-2 border-white">
-						<h2 className="pb-2 font-bold text-2xl text-white">Finalizados</h2>
+					<div className="border-b-2 border-[#9670c0]">
+						<h2 className="pb-2 font-bold text-2xl text-black">Activos</h2>
 					</div>
 					<div className="flex flex-row gap-2 pt-4 flex-wrap">
 						{proyects &&

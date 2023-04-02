@@ -6,7 +6,9 @@ import Footer from "./Footer";
 const LoginPage = () => {
 	return (
 		<section className="h-screen">
-			<Navbar />
+			<section className="bg-[#9670c0]">
+				<Navbar />
+			</section>
 			<div className="flex flex-row justify-center items-center h-[54%]">
 				<ConnectButton />
 			</div>

@@ -73,9 +73,11 @@ const UserPage = () => {
 
 	return (
 		<>
-			<Navbar />
+			<section className="bg-[#9670c0]">
+				<Navbar />
+			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-				<div className="flex flex-row gap-x-4 text-white text-lg">
+				<div className="flex flex-row gap-x-4 text-black text-lg">
 					<h2>User: Thinkathonics</h2>
 					<h2>Address: {address}</h2>
 				</div>
@@ -84,26 +86,26 @@ const UserPage = () => {
 				<div className="flex flex-row gap-x-2 text-white">
 					<Link
 						to="/profile"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Wallet Status
 					</Link>
 					<Link
 						to="/profile/dashboard"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Create Proyect
 					</Link>
 					<Link
 						to="/profile/proyects"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Proyects
 					</Link>
 				</div>
 			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col items-center justify-between">
-				<h2 className="text-white text-xl">
+				<h2 className="text-black text-xl">
 					Total de cuenta: {getTotal(dataCrytos)} Usd
 				</h2>
 				<PieGraph data={dataCrytos} />

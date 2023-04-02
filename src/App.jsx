@@ -14,7 +14,7 @@ import { ProyectProvider } from "./context/index";
 
 function App() {
 	return (
-		<div className="App bg-gray-800 ">
+		<div className="bg-[#fff] ">
 			<ProviderWagmi>
 				<ProyectProvider>
 					<BrowserRouter>

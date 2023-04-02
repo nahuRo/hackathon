@@ -33,9 +33,11 @@ const DashPage = () => {
 
 	return (
 		<>
-			<Navbar />
+			<section className="bg-[#9670c0]">
+				<Navbar />
+			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-				<div className="flex flex-row gap-x-4 text-white text-lg">
+				<div className="flex flex-row gap-x-4 text-black text-lg">
 					<h2>User: Thinkathonics</h2>
 					<h2>Address: {address}</h2>
 				</div>
@@ -44,19 +46,19 @@ const DashPage = () => {
 				<div className="flex flex-row gap-x-2 text-white">
 					<Link
 						to="/profile"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Wallet Status
 					</Link>
 					<Link
 						to="/profile/dashboard"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Create Proyect
 					</Link>
 					<Link
 						to="/profile/proyects"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Proyects
 					</Link>
@@ -64,10 +66,10 @@ const DashPage = () => {
 			</section>
 
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto py-10 ">
-				<h2 className="text-lg text-white pb-8 text-center">Generar nuevo Proyecto</h2>
+				<h2 className="text-lg text-black pb-8 text-center">Generar nuevo Proyecto</h2>
 				<form
 					onSubmit={handleSearch}
-					className="flex flex-col justify-evenly items-center gap-4 bg-indigo-300 p-3 w-full rounded-sm my-0 mx-auto"
+					className="flex flex-col justify-evenly items-center gap-4 bg-[#77ACD2] p-3 w-full rounded-sm my-0 mx-auto"
 				>
 					<div className="w-full ">
 						<label>

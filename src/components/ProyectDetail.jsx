@@ -41,9 +41,11 @@ const ProyectDetail = () => {
 
 	return (
 		<>
-			<Navbar />
+			<section className="bg-[#9670c0]">
+				<Navbar />
+			</section>
 			<section className="px-4 sm:px-0 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg my-0 mx-auto flex flex-col sm:flex-row items-center justify-between py-4">
-				<div className="flex flex-row gap-x-4 text-white text-lg">
+				<div className="flex flex-row gap-x-4 text-black text-lg">
 					<h2>User: Thinkathonics</h2>
 					<h2>Address: {address}</h2>
 				</div>
@@ -52,19 +54,19 @@ const ProyectDetail = () => {
 				<div className="flex flex-row gap-x-2 text-white">
 					<Link
 						to="/profile"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Wallet Status
 					</Link>
 					<Link
 						to="/profile/dashboard"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Create Proyect
 					</Link>
 					<Link
 						to="/profile/proyects"
-						className=" p-2 bg-white hover:bg-indigo-500 duration-300 hover:text-white rounded-md text-black font-semibold"
+						className=" p-2 bg-indigo-500 duration-300 text-white hover:bg-indigo-500/80 rounded-md font-semibold"
 					>
 						Proyects
 					</Link>
@@ -76,23 +78,30 @@ const ProyectDetail = () => {
 						.filter((proyect) => proyect.id === id)
 						.map((item) => (
 							<>
-								<div key={item.id} className="text-white py-4">
-									<span className="block">
-										Nombre del Proyecto: {item.name}
-									</span>
-									<span className="block">
-										Detalles del Proyecto: {item.description}
-									</span>
-									<span className="block">
-										Fecha del Proyecto: {item.validity}
-									</span>
-									<span className="block">
-										Precio estimado del Proyecto: {item.estimate}
-									</span>
-									<span className="block">
+								<div key={item.id} className="bg-[#f7f2fd] p-4">
+									<p className=" text-[#9670c0]">
+										Nombre del Proyecto:
+										<span className="text-black"> {item.name}</span>
+									</p>
+									<p className=" text-[#9670c0]">
+										Detalles del Proyecto:
+										<span className="text-black"> {item.description}</span>
+									</p>
+									<p className=" text-[#9670c0]">
+										Fecha del Proyecto:
+										<span className="text-black"> {item.validity}</span>
+									</p>
+									<p className=" text-[#9670c0]">
+										Precio estimado del Proyecto:
+										<span className="text-black"> {item.estimate}</span>
+									</p>
+
+									<p className=" text-[#9670c0]">
 										Actividad del Proyecto:
-										{item.activity ? " Finalizado" : " No Finalizado"}
-									</span>
+										<span className="text-black">
+											{item.activity ? " Finalizado" : " No Finalizado"}
+										</span>
+									</p>
 								</div>
 								<section className="py-8">
 									<table className="w-full bg-slate-100 py-4">
@@ -128,7 +137,7 @@ const ProyectDetail = () => {
 				<a
 					href={ExampleFile}
 					download
-					className="p-2 bg-slate-50 rounded hover:bg-slate-500 hover:text-white duration-300 cursor-pointer"
+					className="p-2 rounded bg-[#eee6f8] duration-300 cursor-pointer"
 				>
 					Descargar Analiticas del Proyecto
 				</a>
@@ -146,19 +155,19 @@ const ProyectDetail = () => {
 											className="absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer peer"
 										/>
 
-										<div className="bg-slate-50 h-12 w-full pl-5 flex items-center ">
+										<div className="bg-slate-200 h-12 w-full pl-5 flex items-center ">
 											<h3 className="text-lg font-semibold text-black">
 												Crear Nuevo Movimiento
 											</h3>
 										</div>
-										<div className="absolute top-4 right-3 text-red-600 transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
+										<div className="absolute top-4 right-3 text-black transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
 											<MdKeyboardArrowLeft />
 										</div>
 										<div className="bg-white overflow-hidden transition-all  h-0 peer-checked:h-full">
 											<div className="p-4">
 												<form
 													onSubmit={handleNewMov}
-													className="flex flex-col justify-evenly items-center gap-4 bg-red-200 p-3 w-1/2 rounded-sm my-0 mx-auto"
+													className="flex flex-col justify-evenly items-center gap-4 bg-[#77ACD2] p-3 w-1/2 rounded-sm my-0 mx-auto"
 												>
 													<div className="w-full">
 														<label>
@@ -253,7 +262,7 @@ const ProyectDetail = () => {
 														</label>
 													</div>
 
-													<button className="bg-red-700 p-2 rounded w-full">
+													<button className="bg-white hover:bg-indigo-900 hover:text-white p-2 rounded w-full duration-300 font-[700]">
 														Crear
 													</button>
 												</form>
@@ -266,12 +275,12 @@ const ProyectDetail = () => {
 											className="absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer peer"
 										/>
 
-										<div className="bg-slate-50 h-12 w-full pl-5 flex items-center">
+										<div className="bg-slate-200 h-12 w-full pl-5 flex items-center">
 											<h3 className="text-lg font-semibold text-black">
 												Movimientos ejecutados
 											</h3>
 										</div>
-										<div className="absolute top-4 right-3 text-red-600 transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
+										<div className="absolute top-4 right-3 text-black transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
 											<MdKeyboardArrowLeft />
 										</div>
 										<div className="bg-white overflow-hidden transition-all  h-0 peer-checked:h-full">
@@ -357,12 +366,12 @@ const ProyectDetail = () => {
 											className="absolute top-0 inset-x-0 w-full h-12 opacity-0 z-10 cursor-pointer peer"
 										/>
 
-										<div className="bg-slate-50 h-12 w-full pl-5 flex items-center">
+										<div className="bg-slate-200 h-12 w-full pl-5 flex items-center">
 											<h3 className="text-lg font-semibold text-black">
 												Movimientos pendientes
 											</h3>
 										</div>
-										<div className="absolute top-4 right-3 text-red-600  transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
+										<div className="absolute top-4 right-3 text-black  transition-transform duration-500 rotate-0 peer-checked:-rotate-90 ">
 											<MdKeyboardArrowLeft />
 										</div>
 										<div className="bg-white overflow-hidden transition-all  h-0 peer-checked:h-full">

@@ -25,7 +25,7 @@ const Footer = () => {
 				<div className="flex flex-col gap-y-4">
 					<h2 className="text-xl text-gray-200">Contáctanos</h2>
 					<span>
-						Whatsapp o correo electrónico <br /> hello@hackatonics.com
+						Whatsapp o correo electrónico <br /> hello@bondly.com
 					</span>
 					<span>
 						Lunes a Viernes de 9:00 am a 6:00 pm <br /> horario del centro de
@@ -34,11 +34,11 @@ const Footer = () => {
 				</div>
 				<div className="flex flex-col gap-y-4">
 					<h2 className="text-xl text-gray-200">Acerca de</h2>
-					<div className="flex flex-row items-center space-x-2 text-[#15C8FC]">
+					<div className="flex flex-row items-center space-x-2 text-[#9670c0]">
 						<span>Aviso de Privacidad</span>
 						<AiOutlineArrowRight />
 					</div>
-					<div className="flex flex-row items-center space-x-2 text-[#15C8FC]">
+					<div className="flex flex-row items-center space-x-2 text-[#9670c0]">
 						<span>Términos y condiciones</span>
 						<AiOutlineArrowRight />
 					</div>
